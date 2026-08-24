@@ -629,6 +629,24 @@ footer{ border-top:1px solid var(--line); padding:44px 0 34px; background:rgba(v
   .hero-vid{ display:none; }
 }
 </style>
+<style>
+/* ——— About, embedded in the page ——— */
+.names{ margin-top:16px; display:flex; align-items:center; gap:11px; flex-wrap:wrap; font-size:.9rem; color:var(--steel); }
+.names .mono{ font-weight:700; color:var(--paper); }
+.names i{ color:var(--cu); font-style:normal; }
+.ai-grid{ margin-top:28px; display:grid; grid-template-columns:1fr 280px; gap:clamp(28px,4vw,56px); align-items:start; }
+.story p{ font-size:1rem; line-height:1.95; color:var(--steel); margin-bottom:18px; }
+.story .invite{ color:var(--paper); font-weight:600; }
+.story .invite a{ color:var(--cu); text-decoration:underline; text-underline-offset:3px; }
+.pull{ margin:26px 0; padding-inline-start:18px; border-inline-start:3px solid var(--cu);
+  font-size:clamp(1.15rem,2vw,1.45rem); font-weight:800; line-height:1.4; color:var(--paper); }
+.timeline{ display:grid; gap:1px; background:var(--line); border:1px solid var(--line); border-radius:var(--r-lg); overflow:hidden; position:sticky; top:calc(var(--nav-h) + 20px); }
+.tl{ background:var(--ink-2); padding:16px 18px; }
+.tl .mono{ display:block; font-family:var(--f-mono); font-size:1.35rem; font-weight:700; color:var(--cu); line-height:1; }
+.tl em{ display:block; margin-top:6px; font-style:normal; font-size:.78rem; color:var(--steel-dim); line-height:1.5; }
+@media(max-width:900px){ .ai-grid{ grid-template-columns:1fr; } .timeline{ position:static; grid-template-columns:repeat(2,1fr); } }
+@media(max-width:520px){ .timeline{ grid-template-columns:1fr; } }
+</style>
 </head>
 <body>
 
@@ -657,7 +675,7 @@ html[lang="en"] #skip{ transform:translateX(-50%); }
       <li><a href="#about" data-he>השיטה</a><a href="#about" data-en>Method</a></li>
       <li><a href="#audiences" data-he>יתרונות</a><a href="#audiences" data-en>Advantages</a></li>
       <li><a href="#products" data-he>מוצרים</a><a href="#products" data-en>Products</a></li>
-      <li><a href="/about.html" data-he>אודות</a><a href="/about.html" data-en>About</a></li>
+      <li><a href="#developers" data-he>אודות</a><a href="#developers" data-en>About</a></li>
       <li><a href="#faq" data-he>שאלות</a><a href="#faq" data-en>FAQ</a></li>
       <li><a href="#contact" data-he>יצירת קשר</a><a href="#contact" data-en>Contact</a></li>
     </ul>
@@ -684,8 +702,8 @@ html[lang="en"] #skip{ transform:translateX(-50%); }
   <a href="#audiences" onclick="toggleMenu()" data-idx="03" data-en>Advantages</a>
   <a href="#products"  onclick="toggleMenu()" data-idx="04" data-he>מוצרים ורכיבים</a>
   <a href="#products"  onclick="toggleMenu()" data-idx="04" data-en>Products & Parts</a>
-  <a href="/about.html" data-idx="05" data-he>אודות המפתחים</a>
-  <a href="/about.html" data-idx="05" data-en>About the developers</a>
+  <a href="#developers" onclick="toggleMenu()" data-idx="05" data-he>אודות המפתחים</a>
+  <a href="#developers" onclick="toggleMenu()" data-idx="05" data-en>About the developers</a>
   <a href="#faq"       onclick="toggleMenu()" data-idx="05" data-he>שאלות ותשובות</a>
   <a href="#faq"       onclick="toggleMenu()" data-idx="05" data-en>FAQ</a>
   <a href="#contact"   onclick="toggleMenu()" data-idx="06" data-he>יצירת קשר</a>
@@ -1099,6 +1117,52 @@ html[lang="en"] #skip{ transform:translateX(-50%); }
           <p data-en>Threaded Rod Fastener — fast, accurate connection.</p>
           <div class="ln"></div>
         </div>
+      </div>
+    </div>
+
+    <!-- ── ABOUT THE DEVELOPERS  ── -->
+    <div class="about-inline" id="developers" style="margin-top:clamp(48px,6vw,76px)">
+      <div class="sheet-mark sr">
+        <span class="n n-he"><span data-he>אודות</span><span data-en>ABOUT</span></span>
+        <span class="rule"></span>
+        <span class="t"><span data-he>מי עומד מאחורי אומזן</span><span data-en>The people behind UMZEN</span></span>
+      </div>
+      <h2 class="title sr" data-he>שלושים שנה <em>מתחת לתקרה</em></h2>
+      <h2 class="title sr" data-en>Thirty years <em>under the ceiling</em></h2>
+      <div class="names sr d1"><span class="mono" data-he>איתמר קשת</span><span class="mono" data-en>Itamar Keshet</span><i aria-hidden="true">·</i><span class="mono" data-he>תומר יחזקאלי</span><span class="mono" data-en>Tomer Yehezkeli</span></div>
+
+      <div class="ai-grid">
+        <article class="story sr d1">
+          <p data-he>פתחנו את החברה שלנו למחיצות גבס לפני יותר משלושים שנה. בכל פעם שנדרשנו להתקין תקרה, עשינו את זה עם מה שהיה: שאריות פרופיל שכופפנו וחיברנו בדיבל ובברגי "פחפח".</p>
+          <p data-en>We opened our drywall partitions company more than thirty years ago. Every time a ceiling came up, we did it with whatever we had: offcuts of profile, bent by hand and fixed with anchors and self-drilling screws.</p>
+
+          <p data-he>כשעברנו לפרופיל F-47 הבנו שאיכות אמיתית מגיעה ממוטות הברגה. השיטה אז היתה להבריג אום על המוט המקובע לתקרה, להשחיל את הפרופיל שקדחנו בו חור עד שנצמד לאום, ולנעול באום שני.</p>
+          <p data-en>When we moved to F-47 profile, we understood that real quality comes from threaded rods. Back then the method was to run a nut onto the rod anchored in the ceiling, slide on the profile we had drilled, bring it up to the nut, and lock it with a second one.</p>
+
+          <p data-he>זה אמנם עבד, אבל זה גם היה מסורבל. היה צריך לסנכרן רכיב אחרי רכיב עד הרגע שאפשר לשחרר את הידיים, וכל איפוס של התקרה דרש לפתוח ולנעול את האומים המנוגדים שוב ושוב עד שמגיעים לגובה.</p>
+          <p data-en>It did work, but it was unwieldy. You had to line up one component after another just to reach the moment you could let go with both hands, and every leveling pass meant loosening and tightening opposing nuts over and over until the height was right.</p>
+
+          <blockquote class="pull"><span data-he>היה ברור שצריך דרך אחרת.</span><span data-en>It was clear a different way was needed.</span></blockquote>
+
+          <p data-he>ניסיון אחד, חיתוך של אום פלנש רגיל בצורה מסוימת, נתן בדיוק את התוצאה שחיפשנו. ועוד קצת. הטריק עבד.</p>
+          <p data-en>One attempt, cutting a standard flange nut a particular way, gave us exactly the result we were after. And then some. The trick worked.</p>
+
+          <p data-he>משם פנינו לבית מלאכה בקיבוץ גונן. האומים שיצאו משם, דומים מאוד לאלה שאנחנו משווקים היום, עשו את העבודה מהיום הראשון. מאז אנחנו עובדים רק ככה, והבנו שזה צריך להיות נחלת כל מי שעוסק בתחום.</p>
+          <p data-en>From there we went to a workshop in Kibbutz Gonen. The nuts that came out of it, very close to the ones we sell today, did the job from day one. We have worked that way ever since, and it became clear this belonged to everyone in the trade.</p>
+
+          <p data-he>בשנה האחרונה קבלנים רבים כבר עובדים עם אומזן, ומספרים לנו בדיוק על אותם דברים: הנוחות, קלות ההתקנה, והדיוק שמתקבל בפשטות.</p>
+          <p data-en>Over the past year many contractors have started working with UMZEN, and they tell us the same things: the convenience, how easily it installs, and the precision that comes out of it without effort.</p>
+
+          <p class="invite" data-he>קבלן, בעל מקצוע או כל מי שהנושא מעניין אותו מוזמן <a href="#contact">לפנות אלינו</a>. נסביר, נדגים, ונעזור להבין איך מיישמים את השיטה בשטח.</p>
+          <p class="invite" data-en>Contractors, tradespeople, or anyone curious about the method are welcome to <a href="#contact">get in touch</a>. We will explain, demonstrate, and help you understand how it works on site.</p>
+        </article>
+
+        <aside class="timeline sr d2" aria-hidden="true">
+          <div class="tl"><span class="mono">30+</span><em data-he>שנים בגבס</em><em data-en>years in drywall</em></div>
+          <div class="tl"><span class="mono">F-47</span><em data-he>המעבר למוטות הברגה</em><em data-en>the move to threaded rods</em></div>
+          <div class="tl"><span class="mono" data-he>גונן</span><span class="mono" data-en>Gonen</span><em data-he>בית המלאכה הראשון</em><em data-en>the first workshop</em></div>
+          <div class="tl"><span class="mono">×2</span><em data-he>פטנטים בינלאומיים</em><em data-en>international patents</em></div>
+        </aside>
       </div>
     </div>
 
@@ -1534,7 +1598,7 @@ function toggleMenu(){
 })();
 (function activeLink(){
   var links = Array.prototype.slice.call(document.querySelectorAll('.nav-links a'));
-  var secs = ['video','about','audiences','products','faq','contact']
+  var secs = ['video','about','audiences','developers','products','faq','contact']
     .map(function(id){ return document.getElementById(id); }).filter(Boolean);
   if(!secs.length) return;
   var obs = new IntersectionObserver(function(es){
