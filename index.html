@@ -648,6 +648,51 @@ footer{ border-top:1px solid var(--line); padding:44px 0 34px; background:rgba(v
 @media(max-width:900px){ .ai-grid{ grid-template-columns:1fr; } .timeline{ position:static; grid-template-columns:repeat(2,1fr); } }
 @media(max-width:520px){ .timeline{ grid-template-columns:1fr; } }
 </style>
+<style>
+/* ——— video consent gate ——— */
+.vgate{ position:absolute; inset:0; width:100%; height:100%; display:flex; flex-direction:column;
+  align-items:center; justify-content:center; gap:9px; text-align:center; padding:22px;
+  background:radial-gradient(120% 120% at 50% 40%, #171B20 0%, #0B0E12 100%);
+  border:none; cursor:pointer; color:#fff; font:inherit;
+  transition:background var(--t-ui) var(--e-out); }
+.vgate:hover{ background:radial-gradient(120% 120% at 50% 40%, #1E242B 0%, #0B0E12 100%); }
+.vgate:focus-visible{ outline:2px solid var(--cu-2); outline-offset:-4px; }
+.vgate-play{ display:flex; align-items:center; justify-content:center; width:56px; height:56px;
+  border-radius:50%; background:var(--cu); color:var(--on-cu); padding-left:3px;
+  transition:transform var(--t-ui) var(--e-out); }
+.vgate:hover .vgate-play{ transform:scale(1.08); }
+.vgate-t{ font-weight:800; font-size:clamp(.95rem,1.6vw,1.08rem); letter-spacing:-.01em; }
+.vgate-s{ font-family:var(--f-mono); font-size:.68rem; line-height:1.65; color:rgba(255,255,255,.62);
+  max-width:44ch; }
+
+/* ——— cookie notice ——— */
+#ck{ position:fixed; inset-inline:0; bottom:0; z-index:9995; display:none;
+  background:var(--ink-2); border-top:1px solid var(--line);
+  box-shadow:0 -14px 44px var(--shadow); }
+#ck.on{ display:block; animation:ck-in .42s var(--e-out) both; }
+@keyframes ck-in{ from{ transform:translateY(100%); } to{ transform:none; } }
+.ck-in{ max-width:1180px; margin-inline:auto; padding:16px var(--pad);
+  display:flex; align-items:center; gap:clamp(14px,3vw,32px); flex-wrap:wrap; }
+.ck-tx{ flex:1 1 340px; min-width:0; }
+.ck-h{ display:flex; align-items:center; gap:8px; font-family:var(--f-mono); font-size:.63rem;
+  font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--steel-dim); }
+.ck-h b{ width:6px; height:6px; border-radius:50%; background:var(--cu); }
+.ck-p{ margin-top:7px; font-size:.88rem; line-height:1.72; color:var(--steel); max-width:74ch; }
+.ck-p a{ color:var(--cu); text-decoration:underline; text-underline-offset:2px; }
+.ck-btns{ display:flex; align-items:center; gap:10px; flex-wrap:wrap; flex-shrink:0; }
+.ck-btns .btn{ padding:11px 20px; font-size:.85rem; }
+@media(max-width:640px){
+  .ck-in{ padding:13px var(--pad); gap:12px; }
+  .ck-h{ font-size:.58rem; letter-spacing:.12em; }
+  .ck-p{ margin-top:5px; font-size:.82rem; line-height:1.6; }
+  .ck-more{ display:none; }
+  .ck-btns{ width:100%; }
+  .ck-btns .btn{ flex:1 1 0; min-width:0; justify-content:center; }
+}
+/* lift the floating buttons clear of the notice while it is up */
+html.ck-open #wa, html.ck-open #a11y-btn{ bottom:calc(24px + var(--ck-h,96px)); }
+html.ck-open .a11y-panel{ bottom:calc(88px + var(--ck-h,96px)); }
+</style>
 </head>
 <body>
 
@@ -893,10 +938,18 @@ html[lang="en"] #skip{ transform:translateX(-50%); }
     <div class="screen sr d2">
       <div class="screen-bar"><span class="d"></span><span class="d"></span><span class="d"></span><span class="mono"><span data-he>הקלטה · שיטת אומזן</span><span data-en>INSTALLATION VIDEO · UMZEN METHOD</span></span></div>
       <div class="screen-vid">
-        <iframe src="https://www.youtube.com/embed/_TP1rRxkh_Q?start=17"
+        <iframe id="yt-inline" data-src="https://www.youtube-nocookie.com/embed/_TP1rRxkh_Q?start=17"
                 title="UMZEN – שיטת ההתקנה לתקרות גבס"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen loading="lazy"></iframe>
+                allowfullscreen loading="lazy" hidden></iframe>
+        <button type="button" class="vgate" id="yt-gate">
+          <span class="vgate-play" aria-hidden="true">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+          </span>
+          <span class="vgate-t" data-he>להפעלת הסרטון</span><span class="vgate-t" data-en>Play the video</span>
+          <span class="vgate-s" data-he>הסרטון מתארח ב-YouTube. הפעלה תטען תוכן מהם ותאפשר להם להציב עוגיות.</span>
+          <span class="vgate-s" data-en>The video is hosted on YouTube. Playing it loads their content and lets them set cookies.</span>
+        </button>
       </div>
     </div>
   </div>
@@ -1869,7 +1922,7 @@ function toggleFaq(btn){
 var _trigger = null;
 function openYt(){
   _trigger = document.activeElement;
-  document.getElementById('yt-frame').src = 'https://www.youtube.com/embed/_TP1rRxkh_Q?start=92&end=133&autoplay=1';
+  document.getElementById('yt-frame').src = 'https://www.youtube-nocookie.com/embed/_TP1rRxkh_Q?start=92&end=133&autoplay=1';
   var m = document.getElementById('yt-modal');
   m.classList.add('on'); document.body.style.overflow = 'hidden';
   m.querySelector('.x').focus();
@@ -1969,6 +2022,67 @@ document.addEventListener('keydown', function(e){
   var m = document.getElementById('mobile-menu');
   if(m.classList.contains('open')) toggleMenu();
 });
+</script>
+
+<!-- ══ COOKIE NOTICE ═════════════════════════════════ -->
+<div id="ck" role="region" aria-labelledby="ck-h">
+  <div class="ck-in">
+    <div class="ck-tx">
+      <div class="ck-h" id="ck-h"><b></b><span data-he>עוגיות באתר</span><span data-en>Cookies on this site</span></div>
+      <p class="ck-p" data-he>אנחנו שומרים בדפדפן שלכם רק את מה שנדרש כדי שהאתר יעבוד — שפת התצוגה והגדרות הנגישות שבחרתם. אין באתר עוגיות מעקב ואין כלי אנליטיקה. <span class="ck-more">סרטוני YouTube נטענים רק אחרי שתבחרו להפעיל אותם. </span><a href="privacy.html">מדיניות הפרטיות</a></p>
+      <p class="ck-p" data-en>We store only what the site needs in order to work — your display language and the accessibility settings you chose. There are no tracking cookies and no analytics. <span class="ck-more">YouTube videos load only after you choose to play them. </span><a href="privacy.html">Privacy policy</a></p>
+    </div>
+    <div class="ck-btns">
+      <button type="button" class="btn btn-ghost" id="ck-no"><span data-he>רק ההכרחיות</span><span data-en>Essential only</span></button>
+      <button type="button" class="btn btn-primary" id="ck-ok"><span data-he>הבנתי</span><span data-en>Got it</span></button>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ══════════════════════════════════════════════════
+   10 — COOKIE NOTICE + VIDEO CONSENT GATE
+   The site itself sets no tracking cookies, so the notice
+   is informational — but the YouTube embed is a real third
+   party, and it is not loaded until someone asks for it.
+   ══════════════════════════════════════════════════ */
+(function(){
+  var KEY   = 'umzen-cookies';
+  var box   = document.getElementById('ck');
+  var gate  = document.getElementById('yt-gate');
+  var frame = document.getElementById('yt-inline');
+
+  if(gate && frame){
+    gate.addEventListener('click', function(){
+      frame.src = frame.getAttribute('data-src') + '&autoplay=1';
+      frame.hidden = false;
+      gate.parentNode.removeChild(gate);
+      frame.focus();
+    });
+  }
+
+  if(!box) return;
+  function stored(){ try{ return localStorage.getItem(KEY); }catch(e){ return null; } }
+  function close(choice){
+    try{ localStorage.setItem(KEY, choice); }catch(e){}
+    box.classList.remove('on');
+    document.documentElement.classList.remove('ck-open');
+  }
+  document.getElementById('ck-ok').addEventListener('click', function(){ close('all'); });
+  document.getElementById('ck-no').addEventListener('click', function(){ close('essential'); });
+
+  if(!stored()){
+    setTimeout(function(){
+      box.classList.add('on');
+      document.documentElement.classList.add('ck-open');
+      var measure = function(){
+        document.documentElement.style.setProperty('--ck-h', box.offsetHeight + 'px');
+      };
+      measure();
+      window.addEventListener('resize', measure);
+    }, 900);
+  }
+})();
 </script>
 </body>
 </html>
