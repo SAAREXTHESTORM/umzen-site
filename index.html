@@ -295,6 +295,7 @@ html[lang="en"] h1{ font-family:var(--f-dsp); font-weight:700; }
 h1 .cu{ color:var(--cu); display:block; }
 .h1-sub{ margin-top:20px; font-size:clamp(1rem,1.6vw,1.13rem); color:var(--steel); max-width:46ch; line-height:1.85; }
 .wins{ margin-top:24px; display:grid; gap:13px; list-style:none; max-width:38ch; }
+html[lang="en"] .wins{ max-width:47ch; }   /* the reviewed English copy is longer than the Hebrew */
 .wins li{ display:flex; gap:13px; align-items:center; font-size:clamp(1.08rem,1.5vw,1.28rem);
   font-weight:800; line-height:1.4; color:var(--paper); }
 .wins .tk{ flex-shrink:0; width:23px; height:23px; margin-top:0; border-radius:50%;
@@ -726,32 +727,32 @@ html[lang="en"] #skip{ transform:translateX(-50%); }
       <div class="hero-copy">
         <div class="stamp hero-late" style="animation-delay:.05s">
           <span class="dot" aria-hidden="true"></span>
-          <span data-he>פטנט בינלאומי רשום</span><span data-en>Intl. Registered Patent</span>
+          <span data-he>פטנט בינלאומי רשום</span><span data-en>Registered International Patent</span>
         </div>
 
         <h1 data-he>הטכנולוגיה שתרוויח&nbsp;לכם<span class="cu">זמן, כסף ומאמץ.</span></h1>
-        <h1 data-en>The technology that saves&nbsp;you<span class="cu">time, money and effort.</span></h1>
+        <h1 data-en>The technology that saves&nbsp;you<span class="cu">time, labor and money.</span></h1>
 
         <p class="h1-sub hero-late" style="animation-delay:.5s" data-he>
           אומזן — טכנולוגיה פורצת דרך לתליית תקרות גבס. מי שמתקין תקרות יבין את ההבדל בשנייה.
         </p>
         <p class="h1-sub hero-late" style="animation-delay:.5s" data-en>
-          UMZEN — a breakthrough technology for hanging gypsum ceilings. Anyone who installs ceilings will see the difference in a second.
+          UMZEN — a breakthrough system for installing suspended gypsum board ceilings. Professional installers will recognize the difference immediately.
         </p>
 
         <ul class="wins hero-late" style="animation-delay:.58s">
           <li><span class="tk" aria-hidden="true"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4"><polyline points="20 6 9 17 4 12"/></svg></span>
             <span data-he>קצרו את זמן ההתקנה בכ־<bdi dir="ltr">50%</bdi></span>
-            <span data-en>Cut installation time by ~50%</span></li>
+            <span data-en>Reduce installation time by up to 50%</span></li>
           <li><span class="tk" aria-hidden="true"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4"><polyline points="20 6 9 17 4 12"/></svg></span>
             <span data-he>דייקו כל גובה למילימטר</span>
-            <span data-en>Hit every height to the millimeter</span></li>
+            <span data-en>Set the exact height with millimeter precision</span></li>
           <li><span class="tk" aria-hidden="true"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4"><polyline points="20 6 9 17 4 12"/></svg></span>
             <span data-he>מתקין אחד, בלי עוזר</span>
-            <span data-en>One installer, no helper</span></li>
+            <span data-en>One installer — no assistant required</span></li>
           <li><span class="tk" aria-hidden="true"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.4"><polyline points="20 6 9 17 4 12"/></svg></span>
             <span data-he>שינויים גם אחרי שסיימתם</span>
-            <span data-en>Change it after the job is done</span></li>
+            <span data-en>Make adjustments even after installation</span></li>
         </ul>
 
         <div class="hero-ctas hero-late" style="animation-delay:.68s">
@@ -760,7 +761,7 @@ html[lang="en"] #skip{ transform:translateX(-50%); }
             <span data-he>לראות את זה עובד</span><span data-en>See it work</span>
           </a>
           <a href="#products" class="btn btn-ghost">
-            <span data-he>רשימת הרכיבים</span><span data-en>Parts list</span>
+            <span data-he>רשימת הרכיבים</span><span data-en>System components</span>
           </a>
         </div>
 
@@ -777,7 +778,7 @@ html[lang="en"] #skip{ transform:translateX(-50%); }
         <div class="gauge">
           <div class="g-head">
             <span class="l"><span data-he>פרט א׳ &nbsp;·&nbsp; מרחק מהתקרה</span><span data-en>DETAIL A &nbsp;·&nbsp; CEILING DROP</span></span>
-            <span class="tol"><span data-he>סטייה ±1 מ"מ</span><span data-en>TOL ±1mm</span></span>
+            <span class="tol"><span data-he>סטייה ±1 מ"מ</span><span data-en>TOLERANCE ±1 mm</span></span>
           </div>
 
           <div class="g-stage" id="gStage">
@@ -813,7 +814,7 @@ html[lang="en"] #skip{ transform:translateX(-50%); }
           <div class="g-foot">
             <span class="g-hint">
               <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v18M8 7l4-4 4 4M8 17l4 4 4-4"/></svg>
-              <span data-he>גררו לכיוון הגובה</span><span data-en>Drag to set the drop</span>
+              <span data-he>גררו לכיוון הגובה</span><span data-en>Drag to adjust ceiling drop</span>
             </span>
             <span class="g-lock mono" id="gLock" role="status">● <span data-he>נעול</span><span data-en>LOCKED</span></span>
           </div>
@@ -858,7 +859,7 @@ html[lang="en"] #skip{ transform:translateX(-50%); }
     <div class="spec-in">
       <div class="spec-i sr">
         <div class="spec-n"><span data-count="60">0</span><u><span data-he>שנ׳</span><span data-en>s</span></u></div>
-        <div class="spec-l" data-he>שניות לתלייה אחת</div><div class="spec-l" data-en>seconds per hanger</div>
+        <div class="spec-l" data-he>שניות לתלייה אחת</div><div class="spec-l" data-en>installation time per hanger</div>
       </div>
       <div class="spec-i sr d1">
         <div class="spec-n mono">±1<u><span data-he>מ"מ</span><span data-en>mm</span></u></div>
@@ -866,11 +867,11 @@ html[lang="en"] #skip{ transform:translateX(-50%); }
       </div>
       <div class="spec-i sr d2">
         <div class="spec-n"><span data-count="1">0</span></div>
-        <div class="spec-l" data-he>מתקין — בלי עוזר</div><div class="spec-l" data-en>installer — no helper</div>
+        <div class="spec-l" data-he>מתקין — בלי עוזר</div><div class="spec-l" data-en>single installer required</div>
       </div>
       <div class="spec-i sr d3">
         <div class="spec-n"><span data-count="2">0</span></div>
-        <div class="spec-l" data-he>פטנטים בינלאומיים רשומים</div><div class="spec-l" data-en>registered intl. patents</div>
+        <div class="spec-l" data-he>פטנטים בינלאומיים רשומים</div><div class="spec-l" data-en>international patents</div>
       </div>
       <div class="spec-i sr d4">
         <div class="spec-n"><span data-count="9">0</span></div>
@@ -885,12 +886,12 @@ html[lang="en"] #skip{ transform:translateX(-50%); }
   <div class="wrap">
     <div class="sheet-mark sr"><span class="n">01 / 06</span><span class="rule"></span><span class="t"><span data-he>ההתקנה</span><span data-en>INSTALLATION</span></span></div>
     <h2 class="title sr" data-he>סרטון אחד, <em>מההתחלה ועד הסוף</em></h2>
-    <h2 class="title sr" data-en>One video, <em>start to finish</em></h2>
+    <h2 class="title sr" data-en>One video. <em>The complete installation.</em></h2>
     <p class="lede sr d1" data-he><b style="color:var(--paper)">זה מה שאומזן נותן לכם — עכשיו נראה לכם איך.</b> התקנה אמיתית באתר, בלי חיתוכים שמסתירים את החלק המסובך.</p>
-    <p class="lede sr d1" data-en><b style="color:var(--paper)">That's what UMZEN gives you — now here's how.</b> A real installation on site, with no cuts hiding the hard part.</p>
+    <p class="lede sr d1" data-en><b style="color:var(--paper)">See exactly how UMZEN works in a real on-site installation</b> — from start to finish, with nothing hidden.</p>
 
     <div class="screen sr d2">
-      <div class="screen-bar"><span class="d"></span><span class="d"></span><span class="d"></span><span class="mono"><span data-he>הקלטה · שיטת אומזן</span><span data-en>REC · UMZEN METHOD</span></span></div>
+      <div class="screen-bar"><span class="d"></span><span class="d"></span><span class="d"></span><span class="mono"><span data-he>הקלטה · שיטת אומזן</span><span data-en>INSTALLATION VIDEO · UMZEN METHOD</span></span></div>
       <div class="screen-vid">
         <iframe src="https://www.youtube.com/embed/_TP1rRxkh_Q?start=17"
                 title="UMZEN – שיטת ההתקנה לתקרות גבס"
@@ -909,9 +910,9 @@ html[lang="en"] #skip{ transform:translateX(-50%); }
     <div class="method">
       <div>
         <h2 class="title sr" data-he>מה בעצם קורה שם <em>למעלה</em></h2>
-        <h2 class="title sr" data-en>What actually happens <em>up there</em></h2>
+        <h2 class="title sr" data-en>How the <em>UMZEN system</em> works</h2>
         <p class="lede sr d1" data-he>אומזן מחבר בין פרופילי התקרה למוטות ההברגה המעוגנים לתקרה הקונסטרוקטיבית — חיבור בטוח, חזק ומתכוונן שמאפשר דיוק מקסימלי בזמן מינימלי.</p>
-        <p class="lede sr d1" data-en>UMZEN connects the ceiling profiles to the threaded rods anchored into the structural ceiling — a safe, strong, adjustable connection that delivers maximum precision in minimum time.</p>
+        <p class="lede sr d1" data-en>UMZEN connects the ceiling profiles to threaded rods anchored to the structural ceiling, creating a secure, strong and fully adjustable suspension system that delivers maximum precision in minimum time.</p>
       </div>
 
       <div class="gains">
@@ -920,23 +921,23 @@ html[lang="en"] #skip{ transform:translateX(-50%); }
           <div>
             <h3 data-he>מהיר יותר באופן משמעותי</h3><h3 data-en>Significantly faster</h3>
             <p data-he>מבטל לחלוטין את תהליך הכוונון האיטי והמסורבל.</p>
-            <p data-en>Eliminates the slow, cumbersome manual adjustment process entirely.</p>
+            <p data-en>Eliminates the slow and cumbersome conventional adjustment process.</p>
           </div>
         </div>
         <div class="gain card sr d2">
           <div class="gain-i"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="1" fill="currentColor"/></svg></div>
           <div>
-            <h3 data-he>דיוק מילימטרי</h3><h3 data-en>Millimeter precision</h3>
+            <h3 data-he>דיוק מילימטרי</h3><h3 data-en>Millimeter-level precision</h3>
             <p data-he>כיוון גובה התלייה למילימטר המדויק, בכל פעם מחדש.</p>
-            <p data-en>Set the hanger height to the exact millimeter, every single time.</p>
+            <p data-en>Set the suspension height with millimeter-level precision, every time.</p>
           </div>
         </div>
         <div class="gain card sr d3">
           <div class="gain-i"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/><circle cx="8" cy="6" r="2.4" fill="var(--ink-2)"/><circle cx="16" cy="12" r="2.4" fill="var(--ink-2)"/><circle cx="10" cy="18" r="2.4" fill="var(--ink-2)"/></svg></div>
           <div>
-            <h3 data-he>פילוס תקרה בלי מאבק</h3><h3 data-en>Leveling without a fight</h3>
+            <h3 data-he>פילוס תקרה בלי מאבק</h3><h3 data-en>Fast, effortless leveling</h3>
             <p data-he>מקל על העבודה ומאפשר ביצועים טובים בכל הפרמטרים.</p>
-            <p data-en>Makes the work easier and delivers on every parameter.</p>
+            <p data-en>Simplifies installation while improving speed, accuracy and consistency.</p>
           </div>
         </div>
       </div>
@@ -946,23 +947,23 @@ html[lang="en"] #skip{ transform:translateX(-50%); }
       <div class="step card sr d1">
         <div class="step-n mono">01</div>
         <div class="step-ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="2" x2="12" y2="14"/><path d="M8 6l4-4 4 4"/><path d="M8 18h8a2 2 0 000-4H8a2 2 0 000 4z"/><line x1="12" y1="18" x2="12" y2="22"/></svg></div>
-        <h3 data-he>עיגון</h3><h3 data-en>Anchor</h3>
+        <h3 data-he>עיגון</h3><h3 data-en>Anchoring</h3>
         <p data-he>מוט הברגה מעוגן לתקרה הקונסטרוקטיבית.</p>
-        <p data-en>A threaded rod is anchored into the structural ceiling.</p>
+        <p data-en>Anchor a threaded rod securely to the structural ceiling.</p>
       </div>
       <div class="step card sr d2">
         <div class="step-n mono">02</div>
         <div class="step-ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2L8 6h8l-4-4z"/><rect x="7" y="6" width="10" height="12" rx="2"/><line x1="9" y1="10" x2="15" y2="10"/><line x1="9" y1="14" x2="15" y2="14"/><line x1="12" y1="18" x2="12" y2="22"/></svg></div>
-        <h3 data-he>חיבור</h3><h3 data-en>Connect</h3>
+        <h3 data-he>חיבור</h3><h3 data-en>Connection</h3>
         <p data-he>אום אומזן מחבר את פרופיל התקרה למוט ההברגה.</p>
-        <p data-en>The UMZEN nut fastens the ceiling profile to the rod.</p>
+        <p data-en>The UMZEN Nut connects the ceiling profile to the threaded rod.</p>
       </div>
       <div class="step card sr d3">
         <div class="step-n mono">03</div>
         <div class="step-ico"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.4"/><line x1="12" y1="1.5" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="22.5"/><line x1="1.5" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="22.5" y2="12"/></svg></div>
-        <h3 data-he>כיוון</h3><h3 data-en>Adjust</h3>
+        <h3 data-he>כיוון</h3><h3 data-en>Adjustment</h3>
         <p data-he>דיוק מילימטרי — ברגע, ומתחת לגובה תקרת הגבס.</p>
-        <p data-en>Millimeter precision — instantly, from below the ceiling line.</p>
+        <p data-en>Adjust the suspension height with millimeter precision — entirely from below the ceiling level.</p>
       </div>
     </div>
   </div>
@@ -973,13 +974,13 @@ html[lang="en"] #skip{ transform:translateX(-50%); }
   <div class="wrap">
     <div class="sheet-mark sr"><span class="n">03 / 06</span><span class="rule"></span><span class="t"><span data-he>יתרונות</span><span data-en>ADVANTAGES</span></span></div>
     <h2 class="title sr" data-he>מתאים לבעלי מקצוע — <em>וגם לבעלי חוש טכני</em></h2>
-    <h2 class="title sr" data-en>For professionals — <em>and technically-minded people</em></h2>
+    <h2 class="title sr" data-en>Designed for <em>professionals</em></h2>
 
     <div class="sr d1">
       <div class="tabbar" id="tabbar" role="tablist">
         <div class="tabpill" id="tabpill" aria-hidden="true"></div>
         <button class="tabbtn act" id="tb0" onclick="switchTab(0)" role="tab" aria-selected="true" aria-controls="tp0">
-          <span data-he>יתרונות השיטה</span><span data-en>System advantages</span>
+          <span data-he>יתרונות השיטה</span><span data-en>System benefits</span>
         </button>
         <button class="tabbtn" id="tb1" onclick="switchTab(1)" role="tab" aria-selected="false" aria-controls="tp1">
           <span data-he>לאדריכלים</span><span data-en>For architects</span>
@@ -995,40 +996,40 @@ html[lang="en"] #skip{ transform:translateX(-50%); }
           <button class="vidbtn" onclick="openYt()">▶ <span data-he>סרטון</span><span data-en>Video</span></button>
         </div></div>
         <div class="adv"><span class="ix">02</span><div>
-          <div class="adv-t"><span data-he>איפוס קל ומהיר</span><span data-en>Easy and fast leveling</span></div>
+          <div class="adv-t"><span data-he>איפוס קל ומהיר</span><span data-en>Fast, easy leveling</span></div>
         </div></div>
         <div class="adv"><span class="ix">03</span><div>
-          <div class="adv-t"><span data-he>גמישות בסדר העבודה</span><span data-en>Flexibility in work order</span></div>
+          <div class="adv-t"><span data-he>גמישות בסדר העבודה</span><span data-en>Flexible installation sequence</span></div>
         </div></div>
         <div class="adv"><span class="ix">04</span><div>
-          <div class="adv-t"><span data-he>כל העבודה מתבצעת מתחת לגובה תקרת הגבס</span><span data-en>All work is done below the gypsum ceiling line</span></div>
+          <div class="adv-t"><span data-he>כל העבודה מתבצעת מתחת לגובה תקרת הגבס</span><span data-en>All adjustments are performed from below the ceiling level</span></div>
           <button class="vidbtn" onclick="openTk('7577049899078847765')">▶ <span data-he>סרטון</span><span data-en>Video</span></button>
         </div></div>
         <div class="adv"><span class="ix">05</span><div>
-          <div class="adv-t"><span data-he>אפשרות עיגון במקומות צרים</span><span data-en>Can anchor in narrow spaces</span></div>
+          <div class="adv-t"><span data-he>אפשרות עיגון במקומות צרים</span><span data-en>Suitable for installation in confined spaces</span></div>
           <button class="vidbtn" onclick="openTk('7646786636910578964')">▶ <span data-he>סרטון 1</span><span data-en>Video 1</span></button>
           <button class="vidbtn" onclick="openTk('7601448672173231381')">▶ <span data-he>סרטון 2</span><span data-en>Video 2</span></button>
         </div></div>
         <div class="adv"><span class="ix">06</span><div>
-          <div class="adv-t"><span data-he>מתאים למרחקים משתנים מהתשתית — מקטן ועד גדול</span><span data-en>Suits variable distances from the infrastructure</span></div>
+          <div class="adv-t"><span data-he>מתאים למרחקים משתנים מהתשתית — מקטן ועד גדול</span><span data-en>Suitable for a wide range of ceiling drops</span></div>
         </div></div>
         <div class="adv"><span class="ix">07</span><div>
-          <div class="adv-t"><span data-he>חזק במיוחד</span><span data-en>Especially strong</span></div>
+          <div class="adv-t"><span data-he>חזק במיוחד</span><span data-en>Exceptionally strong</span></div>
           <button class="vidbtn" onclick="openTk('7584859741327854868')">▶ <span data-he>סרטון</span><span data-en>Video</span></button>
         </div></div>
         <div class="adv"><span class="ix">08</span><div>
-          <div class="adv-t"><span data-he>ניתן לביצוע על ידי מתקין אחד</span><span data-en>Can be done by a single installer</span></div>
+          <div class="adv-t"><span data-he>ניתן לביצוע על ידי מתקין אחד</span><span data-en>Designed for single-person installation</span></div>
           <button class="vidbtn" onclick="openTk('7266407354172787970')">▶ <span data-he>סרטון</span><span data-en>Video</span></button>
         </div></div>
         <div class="adv"><span class="ix">09</span><div>
-          <div class="adv-t"><span data-he>גמישות בשינויים גם לאחר סיום העבודה</span><span data-en>Flexible to changes even after the job is done</span></div>
+          <div class="adv-t"><span data-he>גמישות בשינויים גם לאחר סיום העבודה</span><span data-en>Allows adjustments even after installation is complete</span></div>
           <button class="vidbtn" onclick="openTk('7581462421726956821')">▶ <span data-he>סרטון</span><span data-en>Video</span></button>
         </div></div>
         <div class="adv"><span class="ix">10</span><div>
-          <div class="adv-t"><span data-he>מתאים לשימוש בסוגי פרופילים רבים</span><span data-en>Works with many profile types</span></div>
+          <div class="adv-t"><span data-he>מתאים לשימוש בסוגי פרופילים רבים</span><span data-en>Compatible with multiple ceiling profile types</span></div>
         </div></div>
         <div class="adv" style="grid-column:1/-1"><span class="ix">11</span><div>
-          <div class="adv-t"><span data-he>פתרונות ייחודיים למצבים שאין להם פתרון אחר</span><span data-en>Unique solutions for situations with no other answer</span></div>
+          <div class="adv-t"><span data-he>פתרונות ייחודיים למצבים שאין להם פתרון אחר</span><span data-en>Unique solutions for challenging installation conditions</span></div>
           <button class="vidbtn" onclick="openTk('7573720067603516692')">▶ <span data-he>סרטון 1</span><span data-en>Video 1</span></button>
           <button class="vidbtn" onclick="openTk('7262776741326834946')">▶ <span data-he>סרטון 2</span><span data-en>Video 2</span></button>
         </div></div>
@@ -1043,14 +1044,14 @@ html[lang="en"] #skip{ transform:translateX(-50%); }
           <div>
             <h3 data-he>לאדריכלים</h3><h3 data-en>For architects</h3>
             <p data-he>שימוש באומזן לתוצאות מדויקות, עם מגוון רחב של אפשרויות עיצוב.</p>
-            <p data-en>Use UMZEN for precise results, with a wide range of design options.</p>
+            <p data-en>UMZEN delivers the precision required for demanding architectural details and a wide range of design applications.</p>
           </div>
         </div>
         <div class="arch-row">
           <span class="ix">01</span>
           <div class="tx">
             <span data-he>דיוק מקסימלי שמאפשר רמה גבוהה של גימור והתאמה לאלמנטים עיצוביים.</span>
-            <span data-en>Maximum precision, enabling a high level of finish and adaptation to design elements.</span>
+            <span data-en>Maximum precision enables superior finishing and accurate alignment with architectural elements.</span>
           </div>
         </div>
         <div class="arch-row">
@@ -1065,13 +1066,13 @@ html[lang="en"] #skip{ transform:translateX(-50%); }
                 <li>דלתות בגובה מלא — שמירה על רווח אחיד מהתקרה</li>
               </ul>
             </div>
-            <div data-en>Enables quick, simple installation of precise elements in ceilings and drywall. For example:
+            <div data-en>Enables fast, precise installation and alignment of architectural elements in gypsum board ceilings and walls. For example:
               <ul>
                 <li>Trimless grilles</li>
-                <li>Lighting busbar strips</li>
-                <li>Special light fixtures</li>
+                <li>Track lighting</li>
+                <li>Specialty lighting fixtures</li>
                 <li>Concealed speakers</li>
-                <li>Full-height doors — keeping a uniform gap from the ceiling</li>
+                <li>Full-height doors — maintaining a precise, uniform gap to the ceiling</li>
               </ul>
             </div>
           </div>
@@ -1095,11 +1096,11 @@ html[lang="en"] #skip{ transform:translateX(-50%); }
         </video>
         <div class="shade"></div>
         <span class="tag" data-he>פטנט בינלאומי רשום</span>
-        <span class="tag" data-en>Intl. registered patent</span>
+        <span class="tag" data-en>Registered international patent</span>
         <div class="foot">
           <h3 data-he>אום אומזן</h3><h3 data-en>UMZEN Nut</h3>
           <p data-he>אום הברגה מיוחדת — הלב של השיטה.</p>
-          <p data-en>A special threaded nut — the heart of the method.</p>
+          <p data-en>A specially designed threaded nut — the core of the UMZEN system.</p>
           <div class="ln"></div>
         </div>
       </div>
@@ -1110,7 +1111,7 @@ html[lang="en"] #skip{ transform:translateX(-50%); }
         </video>
         <div class="shade"></div>
         <span class="tag" data-he>פטנט בינלאומי רשום</span>
-        <span class="tag" data-en>Intl. registered patent</span>
+        <span class="tag" data-en>Registered international patent</span>
         <div class="foot">
           <h3 data-he>ממ"ה</h3><h3 data-en>TRF</h3>
           <p data-he>מבריג מוטות הברגה — חיבור מהיר ומדויק.</p>
@@ -1168,11 +1169,11 @@ html[lang="en"] #skip{ transform:translateX(-50%); }
 
     <!-- ── PARTS LIST / BOM ── -->
     <div style="margin-top:clamp(48px,6vw,72px)">
-      <div class="sheet-mark sr"><span class="n">05 / 06</span><span class="rule"></span><span class="t"><span data-he>רשימת רכיבים · 9 פריטים</span><span data-en>PARTS LIST · 9 ITEMS</span></span></div>
+      <div class="sheet-mark sr"><span class="n">05 / 06</span><span class="rule"></span><span class="t"><span data-he>רשימת רכיבים · 9 פריטים</span><span data-en>SYSTEM COMPONENTS · 9 ITEMS</span></span></div>
       <h2 class="title sr" data-he>מה צריך כדי לעבוד <em>עם אומזן</em></h2>
-      <h2 class="title sr" data-en>What you need to work <em>with UMZEN</em></h2>
+      <h2 class="title sr" data-en>Everything you need to work <em>with UMZEN</em></h2>
       <p class="lede sr d1" data-he>תשע יחידות. זה כל ארגז הכלים של השיטה — בלי הפתעות באמצע העבודה.</p>
-      <p class="lede sr d1" data-en>Nine items. That's the entire toolbox for the method — no surprises mid-job.</p>
+      <p class="lede sr d1" data-en>Nine components. Everything required to install the UMZEN system.</p>
 
       <div class="bom sr d2">
         <div class="bom-head">
@@ -1192,22 +1193,22 @@ html[lang="en"] #skip{ transform:translateX(-50%); }
         <div class="bom-row">
           <span class="bom-ix">03</span>
           <div class="bom-img"><img src="images/threaded-rod.webp" alt="מוט הברגה M8" loading="lazy"/></div>
-          <div class="bom-name"><span data-he>מוט הברגה M8</span><span data-en>Threading Rod M8</span></div>
+          <div class="bom-name"><span data-he>מוט הברגה M8</span><span data-en>M8 Threaded Rod</span></div>
         </div>
         <div class="bom-row">
           <span class="bom-ix">04</span>
           <div class="bom-img"><img src="images/brass-anchor.webp" alt="דיבל פליז M8" loading="lazy"/></div>
-          <div class="bom-name"><span data-he>דיבל פליז M8</span><span data-en>Brass Anchor M8</span></div>
+          <div class="bom-name"><span data-he>דיבל פליז M8</span><span data-en>M8 Brass Anchor</span></div>
         </div>
         <div class="bom-row">
           <span class="bom-ix">05</span>
           <div class="bom-img"><img src="images/drill-bit.webp" alt="מקדח 10 מ&quot;מ" loading="lazy"/></div>
-          <div class="bom-name"><span data-he>מקדח 10 מ"מ</span><span data-en>10mm Drill Bit</span></div>
+          <div class="bom-name"><span data-he>מקדח 10 מ"מ</span><span data-en>10 mm Drill Bit</span></div>
         </div>
         <div class="bom-row">
           <span class="bom-ix">06</span>
           <div class="bom-img"><img src="images/socket.webp" alt="בוקסה 13 מ&quot;מ ארוכה" loading="lazy"/></div>
-          <div class="bom-name"><span data-he>בוקסה 13 מ"מ ארוכה</span><span data-en>13mm Deep Socket</span></div>
+          <div class="bom-name"><span data-he>בוקסה 13 מ"מ ארוכה</span><span data-en>13 mm Deep Socket</span></div>
         </div>
         <div class="bom-row">
           <span class="bom-ix">07</span>
@@ -1222,7 +1223,7 @@ html[lang="en"] #skip{ transform:translateX(-50%); }
         <div class="bom-row">
           <span class="bom-ix">09</span>
           <div class="bom-img"><img src="images/conical-drill.webp" alt="מקדח קונוס 4–12 מ&quot;מ" loading="lazy"/></div>
-          <div class="bom-name"><span data-he>מקדח קונוס 4–12 מ"מ</span><span data-en>Conical Drill Bit 4–12mm</span></div>
+          <div class="bom-name"><span data-he>מקדח קונוס 4–12 מ"מ</span><span data-en>4–12 mm Step Drill Bit</span></div>
         </div>
       </div>
     </div>
@@ -1234,7 +1235,7 @@ html[lang="en"] #skip{ transform:translateX(-50%); }
   <div class="wrap" style="max-width:900px">
     <div class="sheet-mark sr"><span class="n">06 / 06</span><span class="rule"></span><span class="t"><span data-he>שאלות מהשטח</span><span data-en>NOTES &amp; QUERIES</span></span></div>
     <h2 class="title sr" data-he>שאלות שחוזרות <em>מהשטח</em></h2>
-    <h2 class="title sr" data-en>Questions that come back <em>from the field</em></h2>
+    <h2 class="title sr" data-en>Frequently asked <em>questions</em></h2>
 
     <div class="faq sr d1">
       <div class="faq-i">
@@ -1245,19 +1246,19 @@ html[lang="en"] #skip{ transform:translateX(-50%); }
         </button>
         <div class="faq-a"><div>
           <span data-he>ידידותית למשתמש — מאפשרת עבודה עדינה ורכה למפעיל, מה שהופך את תהליך ההתקנה לנוח ומדויק.</span>
-          <span data-en>It's user-friendly — it allows gentle, smooth operation, which makes the installation comfortable and precise.</span>
+          <span data-en>It provides controlled, smooth operation, making installation faster, easier and more precise.</span>
         </div></div>
       </div>
 
       <div class="faq-i">
         <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false">
           <span class="ix"><span data-he>02</span><span data-en>Q02</span></span>
-          <span data-he>האם אומזן מתאים לקונסטרוקציות מסוגים שונים?</span><span data-en>Is UMZEN suitable for different construction types?</span>
+          <span data-he>האם אומזן מתאים לקונסטרוקציות מסוגים שונים?</span><span data-en>Is UMZEN compatible with different ceiling profile systems?</span>
           <svg class="pm" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
         </button>
         <div class="faq-a"><div>
           <span data-he>בהחלט. אומזן מתאים לקונסטרוקציות מסוגים שונים, כולל F-47, C-60, F-49 ועוד.</span>
-          <span data-en>Absolutely. UMZEN suits various construction types, including F-47, C-60, F-49 and more.</span>
+          <span data-en>Yes. UMZEN is compatible with a variety of ceiling profile systems, including F-47, C-60, F-49 and others.</span>
         </div></div>
       </div>
 
@@ -1269,7 +1270,7 @@ html[lang="en"] #skip{ transform:translateX(-50%); }
         </button>
         <div class="faq-a"><div>
           <span data-he>כן. מערכת הכלים והאום מתוכננת כך שמתקין יחיד יכול להחזיק, להחדיר ולכוון את התלייה — בלי אדם שני שיחזיק את הרכיבים במקום.</span>
-          <span data-en>Yes. The tool-and-nut system is designed so a single installer can hold, drive and adjust the hanger — with no second person holding parts in place.</span>
+          <span data-en>Yes. The UMZEN system is designed to allow a single installer to position, connect and adjust each suspension point without requiring a second person to hold the components in place.</span>
         </div></div>
       </div>
 
@@ -1281,7 +1282,7 @@ html[lang="en"] #skip{ transform:translateX(-50%); }
         </button>
         <div class="faq-a"><div>
           <span data-he>אפשרי, אבל זה מסרבל את העבודה ומקשה על הדיוק.</span>
-          <span data-en>It's possible, but it complicates the work and makes precision harder to reach.</span>
+          <span data-en>It is possible, but doing so makes installation more cumbersome and reduces adjustment accuracy.</span>
         </div></div>
       </div>
 
@@ -1293,7 +1294,7 @@ html[lang="en"] #skip{ transform:translateX(-50%); }
         </button>
         <div class="faq-a"><div>
           <span data-he>כן, שיוף קל — כדי לאפשר עבודה חלקה עם כל הרכיבים.</span>
-          <span data-en>Yes, a light grind — so all the components run smoothly.</span>
+          <span data-en>Yes. Lightly deburr the cut end to ensure smooth engagement with all components.</span>
         </div></div>
       </div>
 
@@ -1317,17 +1318,17 @@ html[lang="en"] #skip{ transform:translateX(-50%); }
   <div class="wrap">
     <div class="contact">
       <div>
-        <div class="sheet-mark sr"><span class="n n-he"><span data-he>יצירת קשר</span><span data-en>CONTACT</span></span><span class="rule"></span><span class="t"><span data-he>מענה באותו יום</span><span data-en>RESPONSE · SAME DAY</span></span></div>
+        <div class="sheet-mark sr"><span class="n n-he"><span data-he>יצירת קשר</span><span data-en>CONTACT</span></span><span class="rule"></span><span class="t"><span data-he>מענה באותו יום</span><span data-en>SAME-DAY RESPONSE</span></span></div>
         <h2 class="title sr" data-he>ספרו לנו על <em>הפרויקט הבא</em></h2>
         <h2 class="title sr" data-en>Tell us about <em>your next project</em></h2>
         <p class="lede sr d1" data-he>השאירו טלפון ונחזור אליכם, או תפסו אותנו ישירות — כל המספרים זמינים גם בוואטסאפ.</p>
-        <p class="lede sr d1" data-en>Leave a number and we'll come back to you, or reach us directly — every number is on WhatsApp too.</p>
+        <p class="lede sr d1" data-en>Leave your contact details and we'll get back to you, or contact us directly by phone or WhatsApp.</p>
 
         <div class="people sr d2">
           <div class="person">
             <span class="ic"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .4 1.9.7 2.8a2 2 0 01-.4 2.1L8.1 9.9a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.4c.9.3 1.8.6 2.8.7a2 2 0 011.7 2z"/></svg></span>
             <span class="pinfo">
-              <span class="nm" data-he>עופר פז — שיווק בינלאומי</span><span class="nm" data-en>Ofer Paz — International marketing</span>
+              <span class="nm" data-he>עופר פז — שיווק בינלאומי</span><span class="nm" data-en>Ofer Paz — International Marketing</span>
               <a class="vl" href="tel:+972506636777"><span data-he>050-663-6777</span><span data-en>+972-50-663-6777</span></a>
             </span>
             <a class="wa-chip" href="https://wa.me/972506636777?text=%D7%94%D7%99%D7%99%2C%20%D7%94%D7%92%D7%A2%D7%AA%D7%99%20%D7%9E%D7%94%D7%90%D7%AA%D7%A8%20%D7%A9%D7%9C%20UMZEN" target="_blank" rel="noopener"
@@ -1362,7 +1363,7 @@ html[lang="en"] #skip{ transform:translateX(-50%); }
       </div>
 
       <div class="form card sr d1">
-        <h3 data-he>שליחת פנייה</h3><h3 data-en>Send a request</h3>
+        <h3 data-he>שליחת פנייה</h3><h3 data-en>Contact us</h3>
         <span class="req"><span data-he>* שדות חובה · הפנייה נפתחת בוואטסאפ</span><span data-en>* Required · opens in WhatsApp</span></span>
 
         <form id="cform" novalidate>
@@ -1392,7 +1393,7 @@ html[lang="en"] #skip{ transform:translateX(-50%); }
           </div>
 
           <div class="fg">
-            <label class="fl" for="f-note"><span data-he>הערה</span><span data-en>Note</span></label>
+            <label class="fl" for="f-note"><span data-he>הערה</span><span data-en>Message</span></label>
             <textarea class="fc" id="f-note" name="note"></textarea>
           </div>
 
@@ -1400,7 +1401,7 @@ html[lang="en"] #skip{ transform:translateX(-50%); }
             <input type="checkbox" id="f-consent" required aria-required="true"/>
             <span>
               <span data-he>קראתי ואני מסכים/ה ל<a href="privacy.html">מדיניות הפרטיות</a> ומאשר/ת עיבוד הנתונים האישיים שלי. <u style="color:var(--danger)">*</u></span>
-              <span data-en>I have read and agree to the <a href="privacy.html">privacy policy</a> and consent to processing of my personal data. <u style="color:var(--danger)">*</u></span>
+              <span data-en>I have read and agree to the <a href="privacy.html">Privacy Policy</a> and consent to the processing of my personal data. <u style="color:var(--danger)">*</u></span>
             </span>
           </label>
 
@@ -1412,7 +1413,7 @@ html[lang="en"] #skip{ transform:translateX(-50%); }
           <div class="sent" id="sent" role="status">
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
             <span data-he>נפתח וואטסאפ עם הפרטים — רק ללחוץ שליחה.</span>
-            <span data-en>WhatsApp opened with your details — just hit send.</span>
+            <span data-en>WhatsApp will open with your details. Simply tap Send to submit your message.</span>
           </div>
         </form>
       </div>
@@ -1434,7 +1435,7 @@ html[lang="en"] #skip{ transform:translateX(-50%); }
     </div>
     <div class="byline">
       <span data-he>נבנה על ידי סער קשת — רוצה אתר כזה? <a href="https://royal-fog-7b61.saarex7.workers.dev/" target="_blank" rel="noopener">לחץ כאן</a></span>
-      <span data-en>Built by Saar Keshet — want a site like this? <a href="https://royal-fog-7b61.saarex7.workers.dev/" target="_blank" rel="noopener">Click here</a></span>
+      <span data-en>Website by Saar Keshet — Want a site like this? <a href="https://royal-fog-7b61.saarex7.workers.dev/" target="_blank" rel="noopener">Learn more</a></span>
     </div>
   </div>
 </footer>
