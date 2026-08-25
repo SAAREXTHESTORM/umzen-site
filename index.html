@@ -302,6 +302,11 @@ html[lang="en"] .wins{ max-width:47ch; }   /* the reviewed English copy is longe
   display:flex; align-items:center; justify-content:center; color:var(--cu);
   background:rgba(var(--cu-2-rgb),.14); border:1px solid rgba(var(--cu-rgb),.42); }
 .wins b{ color:var(--paper); font-weight:800; }
+.wins-src{ margin-top:12px; font-family:var(--f-mono); font-size:.67rem; line-height:1.75;
+  color:var(--steel-dim); max-width:56ch; }
+.wins-src a{ color:inherit; text-decoration:none; border-bottom:1px solid rgba(var(--line-rgb),.35);
+  transition:color var(--t-micro) var(--e-out), border-color var(--t-micro) var(--e-out); }
+.wins-src a:hover{ color:var(--cu); border-color:var(--cu); }
 .hero-ctas{ margin-top:26px; display:flex; flex-wrap:wrap; gap:12px; }
 .hero-facts{ margin-top:34px; display:flex; flex-wrap:wrap; gap:10px 22px; padding-top:22px; border-top:1px solid var(--line); }
 .hero-fact{ display:flex; align-items:baseline; gap:7px; font-family:var(--f-mono); font-size:.76rem; color:var(--steel-dim); letter-spacing:.04em; }
@@ -468,6 +473,10 @@ html[lang="he"] .spec-n{ text-align:right; }   /* keep ±1 in LTR order, but flu
 .pat{ position:relative; height:460px; border-radius:var(--r-lg); overflow:hidden; background:var(--ink-3); border:1px solid var(--line);
   transition:border-color var(--t-ui) var(--e-out); }
 .pat:hover{ border-color:rgba(var(--cu-2-rgb),.45); }
+.pat-nos{ margin-top:14px; font-size:.72rem; line-height:1.9; color:var(--steel-dim);
+  letter-spacing:.02em; max-width:70ch; }
+.pat-nos bdi{ color:var(--cu); font-weight:700; }
+.pat-nos i{ margin-inline:8px; font-style:normal; opacity:.5; }
 .pat video{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:.86; transition:transform var(--t-hero) var(--e-out); }
 .pat:hover video{ transform:scale(1.04); }
 .pat .shade{ position:absolute; inset:0; background:linear-gradient(to top, rgba(4,6,9,.94) 4%, rgba(4,6,9,.25) 46%, transparent 72%); }
@@ -799,6 +808,11 @@ html[lang="en"] #skip{ transform:translateX(-50%); }
             <span data-he>שינויים גם אחרי שסיימתם</span>
             <span data-en>Make adjustments even after installation</span></li>
         </ul>
+
+        <p class="wins-src hero-late" style="animation-delay:.62s">
+          <span data-he>* נתון ה־<bdi dir="ltr">50%</bdi> מבוסס על בדיקת השוואה מצולמת בין השיטה הרגילה לאומזן. <a href="#video">לצפייה בסרטון</a></span>
+          <span data-en>* The 50% figure is based on a filmed side-by-side comparison against the conventional method. <a href="#video">Watch the video</a></span>
+        </p>
 
         <div class="hero-ctas hero-late" style="animation-delay:.68s">
           <a href="#video" class="btn btn-primary">
@@ -1142,6 +1156,12 @@ html[lang="en"] #skip{ transform:translateX(-50%); }
     <h2 class="title sr" data-he>שני פטנטים. <em>מערכת אחת.</em></h2>
     <h2 class="title sr" data-en>Two patents. <em>One system.</em></h2>
 
+    <p class="pat-nos mono sr d1">
+      <bdi dir="ltr">US&nbsp;10,087,626</bdi><i aria-hidden="true">·</i><bdi dir="ltr">US&nbsp;11,105,364</bdi><i aria-hidden="true">·</i><bdi dir="ltr">EP&nbsp;3122957</bdi>
+      <span data-he>ורישומים נוספים בבריטניה, גרמניה, קנדה, יפן, סין, ברזיל, רוסיה וישראל.</span>
+      <span data-en>and further registrations in the UK, Germany, Canada, Japan, China, Brazil, Russia and Israel.</span>
+    </p>
+
     <div class="pat-grid">
       <div class="pat sr d1">
         <video autoplay muted loop playsinline preload="metadata" aria-hidden="true" style="transform:scaleX(-1)">
@@ -1271,7 +1291,7 @@ html[lang="en"] #skip{ transform:translateX(-50%); }
         <div class="bom-row">
           <span class="bom-ix">08</span>
           <div class="bom-img"><img src="images/magnetic-gauge.webp" alt="מידון מגנטי" loading="lazy"/></div>
-          <div class="bom-name"><span data-he>מידון מגנטי</span><span data-en>Magnetic Gauge</span></div>
+          <div class="bom-name"><span data-he>מידון מגנטי</span><span data-en>Magnetic Height Gauge</span></div>
         </div>
         <div class="bom-row">
           <span class="bom-ix">09</span>
