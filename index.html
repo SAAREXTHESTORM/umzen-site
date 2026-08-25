@@ -2095,7 +2095,13 @@ document.addEventListener('keydown', function(e){
   document.getElementById('ck-ok').addEventListener('click', function(){ close('all'); });
   document.getElementById('ck-no').addEventListener('click', function(){ close('essential'); });
 
-  if(!stored()){
+  /* inside an iframe (a portfolio preview, an embed) the top-level page owns
+     consent, and a bar across a thumbnail is just noise. The video gate,
+     which is the part that actually blocks a third party, still applies. */
+  var framed = false;
+  try{ framed = window.self !== window.top; }catch(e){ framed = true; }
+
+  if(!stored() && !framed){
     setTimeout(function(){
       box.classList.add('on');
       document.documentElement.classList.add('ck-open');
