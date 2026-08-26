@@ -311,6 +311,9 @@ h1{
   letter-spacing:-.03em; max-width:19ch;
 }
 html[lang="en"] h1{ font-family:var(--f-dsp); font-weight:700; }
+/* the English headline is a full sentence, so it needs a wider measure than the
+   Hebrew one or it runs to four lines and pushes the buttons below the fold */
+html[lang="en"] h1{ max-width:27ch; font-size:clamp(1.85rem,3.9vw,2.85rem); }
 h1 .cu{ color:var(--cu); display:block; }
 .h1-sub{ margin-top:20px; font-size:clamp(1rem,1.6vw,1.13rem); color:var(--steel); max-width:46ch; line-height:1.85; }
 .wins{ margin-top:24px; display:grid; gap:13px; list-style:none; max-width:38ch; }
@@ -816,14 +819,14 @@ html[lang="en"] #skip{ transform:translateX(-50%); }
           </span>
         </div>
 
-        <h1 data-he>הטכנולוגיה שתרוויח&nbsp;לכם<span class="cu">זמן, כסף ומאמץ.</span></h1>
-        <h1 data-en>The technology that saves&nbsp;you<span class="cu">time, labor and money.</span></h1>
+        <h1 data-he>הטכנולוגיה שתחסוך&nbsp;לכם<span class="cu">כסף, זמן ומאמץ.</span></h1>
+        <h1 data-en>The Faster, Smarter Way to Install<span class="cu">Suspended Gypsum Board Ceilings</span></h1>
 
         <p class="h1-sub hero-late" style="animation-delay:.5s" data-he>
           אומזן — טכנולוגיה פורצת דרך לתליית תקרות גבס. מי שמתקין תקרות יבין את ההבדל בשנייה.
         </p>
         <p class="h1-sub hero-late" style="animation-delay:.5s" data-en>
-          UMZEN — a breakthrough system for installing suspended gypsum board ceilings. Professional installers will recognize the difference immediately.
+          UMZEN is a patented suspension system that enables a single installer to level and adjust ceiling profiles from below with millimeter precision.
         </p>
 
         <ul class="wins hero-late" style="animation-delay:.58s">
