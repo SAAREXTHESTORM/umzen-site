@@ -280,6 +280,24 @@ html[lang="en"] .hero-veil{ background:
     linear-gradient(to bottom, rgba(var(--ink-rgb),.14) 0%, rgba(var(--ink-rgb),.40) 58%, var(--ink) 100%); }
 .hero-in{ position:relative; z-index:2; width:100%; display:grid; grid-template-columns:1.05fr .95fr; gap:clamp(32px,5vw,64px); align-items:center; }
 
+/* ——— how to install ——— */
+.steps-grid{ list-style:none; margin:clamp(28px,4vw,44px) 0 0; padding:0;
+  display:grid; grid-template-columns:repeat(4,1fr); gap:clamp(14px,2vw,22px); }
+.step-card{ display:flex; flex-direction:column; gap:14px; }
+.step-fig{ position:relative; border:1px solid var(--line); border-radius:var(--r-lg);
+  background:#ECEFF2; overflow:hidden; aspect-ratio:1; }
+.step-fig img{ width:100%; height:100%; object-fit:contain; display:block; }
+.step-n{ position:absolute; top:10px; inset-inline-start:12px;
+  font-size:.72rem; font-weight:700; letter-spacing:.1em; color:var(--cu);
+  background:rgba(var(--ink-rgb),.9); border:1px solid rgba(var(--cu-2-rgb),.3);
+  border-radius:100px; padding:3px 9px; direction:ltr; unicode-bidi:isolate; }
+.step-card h3{ margin:0; font-size:1.02rem; font-weight:700; letter-spacing:-.01em; line-height:1.35; }
+.step-card p{ margin:0; font-size:.88rem; line-height:1.75; color:var(--steel); }
+.steps-foot{ margin:clamp(22px,3vw,32px) 0 0; font-size:.9rem; color:var(--steel); max-width:70ch; }
+.steps-foot a{ color:var(--cu); text-decoration:underline; text-underline-offset:2px; }
+@media(max-width:1024px){ .steps-grid{ grid-template-columns:repeat(2,1fr); } }
+@media(max-width:560px){ .steps-grid{ grid-template-columns:1fr; }
+  .step-fig{ max-width:340px; } }
 /* ——— hero patent plate ——— */
 .pstamp{
   display:inline-flex; align-items:center; gap:11px; padding:9px 15px 9px 11px;
@@ -978,7 +996,7 @@ html[lang="en"] #skip{ transform:translateX(-50%); }
 <!-- ══ SHEET 01 — VIDEO ══════════════════════════════ -->
 <section class="sheet" id="video">
   <div class="wrap">
-    <div class="sheet-mark sr"><span class="n">01 / 06</span><span class="rule"></span><span class="t"><span data-he>ההתקנה</span><span data-en>INSTALLATION</span></span></div>
+    <div class="sheet-mark sr"><span class="n">01 / 07</span><span class="rule"></span><span class="t"><span data-he>ההתקנה</span><span data-en>INSTALLATION</span></span></div>
     <h2 class="title sr" data-he>סרטון אחד, <em>מההתחלה ועד הסוף</em></h2>
     <h2 class="title sr" data-en>One video. <em>The complete installation.</em></h2>
     <p class="lede sr d1" data-he><b style="color:var(--paper)">זה מה שאומזן נותן לכם — עכשיו נראה לכם איך.</b> התקנה אמיתית באתר, בלי חיתוכים שמסתירים את החלק המסובך.</p>
@@ -1007,7 +1025,7 @@ html[lang="en"] #skip{ transform:translateX(-50%); }
 <!-- ══ SHEET 02 — METHOD ═════════════════════════════ -->
 <section class="sheet" id="about" style="border-top:1px solid var(--line);">
   <div class="wrap">
-    <div class="sheet-mark sr"><span class="n">02 / 06</span><span class="rule"></span><span class="t"><span data-he>השיטה</span><span data-en>METHOD</span></span></div>
+    <div class="sheet-mark sr"><span class="n">02 / 07</span><span class="rule"></span><span class="t"><span data-he>השיטה</span><span data-en>METHOD</span></span></div>
 
     <div class="method">
       <div>
@@ -1071,10 +1089,62 @@ html[lang="en"] #skip{ transform:translateX(-50%); }
   </div>
 </section>
 
-<!-- ══ SHEET 03 — ADVANTAGES ═════════════════════════ -->
+<!-- ══ SHEET 03 — HOW TO INSTALL ═════════════════════ -->
+<section class="sheet" id="howto" style="border-top:1px solid var(--line);">
+  <div class="wrap">
+    <div class="sheet-mark sr"><span class="n">03 / 07</span><span class="rule"></span><span class="t"><span data-he>הוראות התקנה</span><span data-en>HOW TO INSTALL</span></span></div>
+
+    <h2 class="title sr" data-he>ארבעה שלבים, <em>ומתקין אחד</em></h2>
+    <h2 class="title sr" data-en>Four steps, <em>one installer</em></h2>
+    <p class="lede sr d1" data-he>אותה תלייה, מההתחלה ועד הסוף. אין שלב שדורש זוג ידיים נוסף, ואין נעילה באום נגדי.</p>
+    <p class="lede sr d1" data-en>One hanger, start to finish. No step needs a second pair of hands, and nothing is locked with an opposing nut.</p>
+
+    <ol class="steps-grid">
+        <li class="step-card sr">
+          <div class="step-fig">
+            <img src="images/install-1.svg" alt="" loading="lazy" width="512" height="512"/>
+            <span class="step-n mono">01</span>
+          </div>
+          <h3 data-he>יוצרים חור בפרופיל</h3><h3 data-en>Make a hole in the profile</h3>
+          <p data-he>קודחים חור יחיד בפאה העליונה של הפרופיל, בנקודה שבה התלייה אמורה לשבת. עובד עם כל פרופיל תקרה.</p><p data-en>Drill a single hole through the top face of the profile at the point where the hanger belongs. Works with any ceiling profile.</p>
+        </li>
+        <li class="step-card sr">
+          <div class="step-fig">
+            <img src="images/install-2.svg" alt="" loading="lazy" width="512" height="512"/>
+            <span class="step-n mono">02</span>
+          </div>
+          <h3 data-he>קודחים לתקרה ומקבעים דיבל</h3><h3 data-en>Drill into the ceiling and set the anchor</h3>
+          <p data-he>דרך אותו חור קודחים ישר אל תקרת הבטון, ומקבעים בה דיבל פליז M8. הפרופיל כבר במקום, אז הקדח יוצא בדיוק במקום הנכון.</p><p data-en>Through that same hole, drill straight up into the concrete slab and set an M8 brass anchor. The profile is already in place, so the hole lands exactly where it belongs.</p>
+        </li>
+        <li class="step-card sr">
+          <div class="step-fig">
+            <img src="images/install-3.svg" alt="" loading="lazy" width="512" height="512"/>
+            <span class="step-n mono">03</span>
+          </div>
+          <h3 data-he>מכניסים את האום לפרופיל</h3><h3 data-en>Seat the nut in the profile</h3>
+          <p data-he>אום אומזן נכנס לחור מלמטה ויושב בו. ההברגה הפנימית שלו M8, כמו מוט ההברגה.</p><p data-en>The UMZEN nut goes into the hole from below and seats in it. Its internal thread is M8, the same as the rod.</p>
+        </li>
+        <li class="step-card sr">
+          <div class="step-fig">
+            <img src="images/install-4.svg" alt="" loading="lazy" width="512" height="512"/>
+            <span class="step-n mono">04</span>
+          </div>
+          <h3 data-he>מבריגים את המוט בתנועה אחת</h3><h3 data-en>Drive the rod home in one motion</h3>
+          <p data-he>הממ"ה אוחז את מוט ההברגה ומבריג אותו דרך האום עד לדיבל שבתקרה — תנועה אחת רציפה, בלי לשחרר את הידיים ובלי אום נגדי.</p><p data-en>The TRD grips the threaded rod and drives it through the nut into the anchor above. One continuous motion, with no second nut and without letting go.</p>
+        </li>
+    </ol>
+
+    <p class="steps-foot sr">
+      <span data-he>אחרי שהתלייה במקום אפשר לכוון את הגובה מלמטה בכל רגע, גם אחרי שסיימתם. <a href="#video">לראות את זה בסרטון</a></span>
+      <span data-en>Once the hanger is in, the height can be adjusted from below at any point, including after the job is done. <a href="#video">See it in the video</a></span>
+    </p>
+  </div>
+</section>
+
+<!-- ══ SHEET 04 — ADVANTAGES ═════════════════════════ -->
 <section class="sheet" id="audiences" style="border-top:1px solid var(--line);">
   <div class="wrap">
-    <div class="sheet-mark sr"><span class="n">03 / 06</span><span class="rule"></span><span class="t"><span data-he>יתרונות</span><span data-en>ADVANTAGES</span></span></div>
+    <div class="sheet-mark sr"><span class="n">04 / 07</span><span class="rule"></span><span class="t"><span data-he>יתרונות</span><span data-en>ADVANTAGES</span></span></div>
     <h2 class="title sr" data-he>מתאים לבעלי מקצוע — <em>וגם לבעלי חוש טכני</em></h2>
     <h2 class="title sr" data-en>Designed for <em>professionals</em></h2>
 
@@ -1187,7 +1257,7 @@ html[lang="en"] #skip{ transform:translateX(-50%); }
 <!-- ══ SHEET 04 — PRODUCTS ═══════════════════════════ -->
 <section class="sheet" id="products" style="border-top:1px solid var(--line);">
   <div class="wrap">
-    <div class="sheet-mark sr"><span class="n">04 / 06</span><span class="rule"></span><span class="t"><span data-he>רכיבים בפטנט</span><span data-en>PATENTED PARTS</span></span></div>
+    <div class="sheet-mark sr"><span class="n">05 / 07</span><span class="rule"></span><span class="t"><span data-he>רכיבים בפטנט</span><span data-en>PATENTED PARTS</span></span></div>
     <h2 class="title sr" data-he>שני פטנטים. <em>מערכת אחת.</em></h2>
     <h2 class="title sr" data-en>Two patents. <em>One system.</em></h2>
 
@@ -1277,7 +1347,7 @@ html[lang="en"] #skip{ transform:translateX(-50%); }
 
     <!-- ── PARTS LIST / BOM ── -->
     <div style="margin-top:clamp(48px,6vw,72px)">
-      <div class="sheet-mark sr"><span class="n">05 / 06</span><span class="rule"></span><span class="t"><span data-he>רשימת רכיבים · 9 פריטים</span><span data-en>SYSTEM COMPONENTS · 9 ITEMS</span></span></div>
+      <div class="sheet-mark sr"><span class="n">06 / 07</span><span class="rule"></span><span class="t"><span data-he>רשימת רכיבים · 9 פריטים</span><span data-en>SYSTEM COMPONENTS · 9 ITEMS</span></span></div>
       <h2 class="title sr" data-he>מה צריך כדי לעבוד <em>עם אומזן</em></h2>
       <h2 class="title sr" data-en>Everything you need to work <em>with UMZEN</em></h2>
       <p class="lede sr d1" data-he>תשע יחידות. זה כל ארגז הכלים של השיטה — בלי הפתעות באמצע העבודה.</p>
@@ -1291,7 +1361,7 @@ html[lang="en"] #skip{ transform:translateX(-50%); }
         <div class="bom-row">
           <span class="bom-ix">01</span>
           <div class="bom-img"><img src="images/umzen-nut.webp" alt="אום אומזן" loading="lazy"/></div>
-          <div class="bom-name"><span data-he>אום אומזן</span><span data-en>UMZEN Nut</span><span class="bom-pat"><span data-he>פטנט בינלאומי</span><span data-en>Registered International Patent</span></span></div>
+          <div class="bom-name"><span data-he>אום אומזן — הברגה פנימית M8</span><span data-en>UMZEN Nut — M8 internal thread</span><span class="bom-pat"><span data-he>פטנט בינלאומי</span><span data-en>Registered International Patent</span></span></div>
         </div>
         <div class="bom-row">
           <span class="bom-ix">02</span>
@@ -1338,10 +1408,10 @@ html[lang="en"] #skip{ transform:translateX(-50%); }
   </div>
 </section>
 
-<!-- ══ SHEET 06 — FAQ ════════════════════════════════ -->
+<!-- ══ SHEET 07 — FAQ ════════════════════════════════ -->
 <section class="sheet" id="faq" style="border-top:1px solid var(--line);">
   <div class="wrap" style="max-width:900px">
-    <div class="sheet-mark sr"><span class="n">06 / 06</span><span class="rule"></span><span class="t"><span data-he>שאלות מהשטח</span><span data-en>TECHNICAL FAQ</span></span></div>
+    <div class="sheet-mark sr"><span class="n">07 / 07</span><span class="rule"></span><span class="t"><span data-he>שאלות מהשטח</span><span data-en>TECHNICAL FAQ</span></span></div>
     <h2 class="title sr" data-he>שאלות שחוזרות <em>מהשטח</em></h2>
     <h2 class="title sr" data-en>Frequently asked <em>questions</em></h2>
 
@@ -1436,7 +1506,7 @@ html[lang="en"] #skip{ transform:translateX(-50%); }
           <div class="person">
             <span class="ic"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6A19.8 19.8 0 012.1 4.2 2 2 0 014.1 2h3a2 2 0 012 1.7c.1 1 .4 1.9.7 2.8a2 2 0 01-.4 2.1L8.1 9.9a16 16 0 006 6l1.3-1.3a2 2 0 012.1-.4c.9.3 1.8.6 2.8.7a2 2 0 011.7 2z"/></svg></span>
             <span class="pinfo">
-              <span class="nm" data-he>עופר פז — שיווק בינלאומי</span><span class="nm" data-en>Ofer Paz — International Marketing</span>
+              <span class="nm" data-he>עופר פז — שיווק בינלאומי</span><span class="nm" data-en>Ofer Paz — International Sales &amp; Business Development</span>
               <a class="vl" href="tel:+972506636777"><span data-he>050-663-6777</span><span data-en>+972-50-663-6777</span></a>
             </span>
             <a class="wa-chip" href="https://wa.me/972506636777?text=%D7%94%D7%99%D7%99%2C%20%D7%94%D7%92%D7%A2%D7%AA%D7%99%20%D7%9E%D7%94%D7%90%D7%AA%D7%A8%20%D7%A9%D7%9C%20UMZEN" target="_blank" rel="noopener"
@@ -1711,7 +1781,7 @@ function toggleMenu(){
 })();
 (function activeLink(){
   var links = Array.prototype.slice.call(document.querySelectorAll('.nav-links a'));
-  var secs = ['video','about','audiences','developers','products','faq','contact']
+  var secs = ['video','about','howto','audiences','developers','products','faq','contact']
     .map(function(id){ return document.getElementById(id); }).filter(Boolean);
   if(!secs.length) return;
   var obs = new IntersectionObserver(function(es){
