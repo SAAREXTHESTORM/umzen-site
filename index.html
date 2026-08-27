@@ -295,6 +295,10 @@ html[lang="en"] .hero-veil{ background:
   width:34%; max-width:104px; height:auto; aspect-ratio:1; object-fit:cover;
   border-radius:8px; border:1px solid rgba(var(--line-rgb),.4);
   box-shadow:0 4px 14px rgba(var(--line-rgb),.20); background:#fff; }
+/* in steps 1 and 3 the drawing itself sits on the left, so the inset moves
+   across to keep off it. Counted in DOM order, so it holds in both languages. */
+.ins-grid > li:nth-child(1) img.ins-photo,
+.ins-grid > li:nth-child(3) img.ins-photo{ left:auto; right:10px; }
 @media(max-width:560px){ .ins-fig img.ins-photo{ width:30%; } }
 .ins-n{ position:absolute; top:10px; inset-inline-start:12px;
   font-size:.72rem; font-weight:700; letter-spacing:.1em; color:var(--cu);
