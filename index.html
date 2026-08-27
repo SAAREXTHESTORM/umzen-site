@@ -287,12 +287,23 @@ html[lang="en"] .hero-veil{ background:
 .ins-fig{ position:relative; border:1px solid var(--line); border-radius:var(--r-lg);
   background:#ECEFF2; overflow:hidden; aspect-ratio:1; }
 .ins-fig img{ width:100%; height:100%; object-fit:contain; display:block; }
+/* the generic .ins-fig img rule is the more specific selector, so the inset has
+   to name the element too or it keeps that rule's width:100%; height:100% */
+.ins-fig img.ins-photo{ position:absolute; bottom:10px; inset-inline-end:10px;
+  width:34%; max-width:104px; height:auto; aspect-ratio:1; object-fit:cover;
+  border-radius:8px; border:1px solid rgba(var(--line-rgb),.4);
+  box-shadow:0 4px 14px rgba(var(--line-rgb),.20); background:#fff; }
+@media(max-width:560px){ .ins-fig img.ins-photo{ width:30%; } }
 .ins-n{ position:absolute; top:10px; inset-inline-start:12px;
   font-size:.72rem; font-weight:700; letter-spacing:.1em; color:var(--cu);
   background:rgba(var(--ink-rgb),.9); border:1px solid rgba(var(--cu-2-rgb),.3);
   border-radius:100px; padding:3px 9px; direction:ltr; unicode-bidi:isolate; }
 .ins-card h3{ margin:0; font-size:1.02rem; font-weight:700; letter-spacing:-.01em; line-height:1.35; }
 .ins-card p{ margin:0; font-size:.88rem; line-height:1.75; color:var(--steel); }
+.ins-note{ margin:clamp(22px,3vw,30px) 0 0; padding:14px 18px; max-width:72ch;
+  border:1px solid var(--line-soft); border-inline-start:2px solid var(--cu);
+  border-radius:var(--r); background:var(--ink-2); font-size:.88rem; color:var(--steel); }
+.ins-note b{ color:var(--paper); font-weight:700; }
 .ins-foot{ margin:clamp(22px,3vw,32px) 0 0; font-size:.9rem; color:var(--steel); max-width:70ch; }
 .ins-foot a{ color:var(--cu); text-decoration:underline; text-underline-offset:2px; }
 @media(max-width:1024px){ .ins-grid{ grid-template-columns:repeat(2,1fr); } }
@@ -1104,6 +1115,7 @@ html[lang="en"] #skip{ transform:translateX(-50%); }
         <li class="ins-card sr">
           <div class="ins-fig">
             <img src="images/install-1.svg" alt="" loading="lazy" width="512" height="512"/>
+            <img class="ins-photo" src="images/install-1-photo.jpg" alt="" loading="lazy" width="360" height="360"/>
             <span class="ins-n mono">01</span>
           </div>
           <h3 data-he>יוצרים חור בפרופיל</h3><h3 data-en>Make a hole in the profile</h3>
@@ -1112,6 +1124,7 @@ html[lang="en"] #skip{ transform:translateX(-50%); }
         <li class="ins-card sr">
           <div class="ins-fig">
             <img src="images/install-2.svg" alt="" loading="lazy" width="512" height="512"/>
+            <img class="ins-photo" src="images/install-2-photo.jpg" alt="" loading="lazy" width="360" height="360"/>
             <span class="ins-n mono">02</span>
           </div>
           <h3 data-he>קודחים לתקרה ומקבעים דיבל</h3><h3 data-en>Drill into the ceiling and set the anchor</h3>
@@ -1120,20 +1133,27 @@ html[lang="en"] #skip{ transform:translateX(-50%); }
         <li class="ins-card sr">
           <div class="ins-fig">
             <img src="images/install-3.svg" alt="" loading="lazy" width="512" height="512"/>
+            <img class="ins-photo" src="images/install-3-photo.jpg" alt="" loading="lazy" width="360" height="360"/>
             <span class="ins-n mono">03</span>
           </div>
-          <h3 data-he>מכניסים את האום לפרופיל</h3><h3 data-en>Seat the nut in the profile</h3>
+          <h3 data-he>מכניסים את האום לפרופיל</h3><h3 data-en>Install the nut in the profile</h3>
           <p data-he>אום אומזן נכנס לחור מלמטה ויושב בו. ההברגה הפנימית שלו M8, כמו מוט ההברגה.</p><p data-en>The UMZEN nut goes into the hole from below and seats in it. Its internal thread is M8, the same as the threaded rod.</p>
         </li>
         <li class="ins-card sr">
           <div class="ins-fig">
             <img src="images/install-4.svg" alt="" loading="lazy" width="512" height="512"/>
+            <img class="ins-photo" src="images/install-4-photo.jpg" alt="" loading="lazy" width="360" height="360"/>
             <span class="ins-n mono">04</span>
           </div>
           <h3 data-he>מבריגים את המוט בתנועה אחת</h3><h3 data-en>Drive the threaded rod home in one motion</h3>
-          <p data-he>הממ"ה אוחז את מוט ההברגה ומבריג אותו דרך האום עד לדיבל שבתקרה — תנועה אחת רציפה, בלי לשחרר את הידיים ובלי אום נגדי.</p><p data-en>The TRD grips the threaded rod and drives it through the nut into the anchor above. One continuous motion, with no second nut and without letting go.</p>
+          <p data-he>הממ"ה אוחז את מוט ההברגה ומבריג אותו דרך האום עד לדיבל שבתקרה, בתנועה אחת רציפה.</p><p data-en>The TRD grips the threaded rod and drives it through the nut into the anchor above, in one continuous motion.</p>
         </li>
     </ol>
+
+    <p class="ins-note sr">
+      <span data-he><b>אפשר גם להפוך את הסדר.</b> מרכיבים את האום על מוט ההברגה עוד לפני שמתקינים, ואז מבריגים את שניהם יחד דרך הפרופיל אל הדיבל שבתקרה. אותה תוצאה, לפי מה שנוח בשטח.</span>
+      <span data-en><b>The order can be swapped.</b> Put the nut onto the threaded rod first, then drive the two up together through the profile and into the anchor. Same result, whichever suits the site better.</span>
+    </p>
 
     <p class="ins-foot sr">
       <span data-he>אחרי שהתלייה במקום אפשר לכוון את הגובה מלמטה בכל רגע, גם אחרי שסיימתם. <a href="#video">לראות את זה בסרטון</a></span>
