@@ -289,7 +289,9 @@ html[lang="en"] .hero-veil{ background:
 .ins-fig img{ width:100%; height:100%; object-fit:contain; display:block; }
 /* the generic .ins-fig img rule is the more specific selector, so the inset has
    to name the element too or it keeps that rule's width:100%; height:100% */
-.ins-fig img.ins-photo{ position:absolute; bottom:10px; inset-inline-end:10px;
+/* left in both languages, so a physical side rather than a logical one:
+   inset-inline-end put it left in Hebrew but right in English */
+.ins-fig img.ins-photo{ position:absolute; bottom:10px; left:10px;
   width:34%; max-width:104px; height:auto; aspect-ratio:1; object-fit:cover;
   border-radius:8px; border:1px solid rgba(var(--line-rgb),.4);
   box-shadow:0 4px 14px rgba(var(--line-rgb),.20); background:#fff; }
@@ -1151,8 +1153,8 @@ html[lang="en"] #skip{ transform:translateX(-50%); }
     </ol>
 
     <p class="ins-note sr">
-      <span data-he><b>אפשר גם להפוך את הסדר.</b> מרכיבים את האום על מוט ההברגה עוד לפני שמתקינים, ואז מבריגים את שניהם יחד דרך הפרופיל אל הדיבל שבתקרה. אותה תוצאה, לפי מה שנוח בשטח.</span>
-      <span data-en><b>The order can be swapped.</b> Put the nut onto the threaded rod first, then drive the two up together through the profile and into the anchor. Same result, whichever suits the site better.</span>
+      <span data-he>אפשר גם להפוך את הסדר בין שלוש לארבע.</span>
+      <span data-en>Steps 3 and 4 can also be swapped.</span>
     </p>
 
     <p class="ins-foot sr">
